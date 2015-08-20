@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/nachkar/Downloads/Test/src/hr/neos/test/pagecode/LoginPageCode.java</file>
-            <file>file:/Users/nachkar/Downloads/Test/WebContent/WEB-INF/web.xml</file>
             <file>file:/Users/nachkar/NetBeansProjects/StockInterieur/Test/nbproject/build-impl.xml</file>
-            <file>file:/Users/nachkar/Downloads/Test/WebContent/index.sec</file>
-            <file>file:/Users/nachkar/Downloads/Test/WebContent/login.xhtml</file>
+            <file>file:/Users/nachkar/NetBeansProjects/StockInterieur/Test/nbproject/build-impl.xml~</file>
+            <file>file:/Users/nachkar/NetBeansProjects/StockInterieur/Test/WebContent/hr/neos/test/pagecode/LoginPageCode.java</file>
+            <file>file:/Users/nachkar/NetBeansProjects/StockInterieur/Test/WebContent/login.xhtml</file>
+            <file>file:/Users/nachkar/NetBeansProjects/StockInterieur/Test/WebContent/hr/neos/test/servlet/SecurityServlet.java</file>
         </group>
     </open-files>
 </project-private>

@@ -6,19 +6,18 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core">
-	<h:head>
-<style>
-.button {
-    background-color: #3851ec !important;
-    color: #ffffff;
-    text-align: center !important;
-    border:none;
-    position:relative;
-    margin:250px 0 0 45%
-}
-
-</style>
-	</h:head>
+<h:head>
+    <style>
+    .button {
+        background-color: #3851ec !important;
+        color: #ffffff;
+       text-align: center !important;
+       border:none;
+      position:relative;
+       margin:250px 0 0 45%
+    }
+    </style>
+</h:head>
 	<h:body>
 		<h:form id="loginForm">
 			<p:button value="Facebook Connect" href="#{loginPageCode.facebookUrlAuth}" styleClass="button"/>
