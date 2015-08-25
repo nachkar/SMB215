@@ -1,28 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html>
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link href="Styles/styles.css" rel="stylesheet" type="text/css"/>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+        <div class="login">
+        <h:form id="loginForm">         
+            <p:growl id="msg" showDetail="true" life="3000" />
+ 
+                    <fieldset>
+                        <label for="username">Username</label>
+                         <p:inputText id="username" value="#{loginPageCode.getUserName()}" class="textfield"></p:inputText>                     
+                    </fieldset>
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:f="http://java.sun.com/jsf/core">
-<h:head>
-    <style>
-    .button {
-        background-color: #3851ec !important;
-        color: #ffffff;
-       text-align: center !important;
-       border:none;
-      position:relative;
-       margin:250px 0 0 45%
-    }
-    </style>
-</h:head>
-	<h:body>
-		<h:form id="loginForm">
-			<p:button value="Facebook Connect" href="#{loginPageCode.facebookUrlAuth}" styleClass="button"/>
-			<br/><br/>
-			<h:outputText value="#{loginPageCode.userFromSession}"></h:outputText>
-		</h:form>
-	</h:body>
+                    <fieldset >
+                         <label for="password">Password</label>
+                         <p:password id="password" value="#{loginPageCode.getUserPassword()}" feedback="false" class="textfield"></p:password>
+                    </fieldset>
+                    <fieldset >
+                        <p:commandButton action="#{LoginBean.checkValidUser()}" value="" update="loginForm" ajax="true" styleClass="login-btn"></p:commandButton>
+                        <p:button value="" href="#{loginPageCode.facebookUrlAuth}" styleClass="facebook-btn" />
+
+                    </fieldset>
+        </h:form>
+        </div>
+    </h:body>
+ 
 </html>

@@ -34,4 +34,28 @@ public class LoginPageCode implements Serializable {
 			return "";
 		}
 	}
+        
+        public String getUserName() {
+		HttpSession session =
+		(HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
+		String userName = (String) session.getAttribute("FACEBOOK_USER");
+		if (userName != null) {
+			return userName;
+		}
+		else {
+			return "";
+		}
+	}
+        
+         public String getUserPassword() {
+		HttpSession session =
+		(HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
+		String password = (String) session.getAttribute("FACEBOOK_PASS");
+		if (password != null) {
+			return  password;
+		}
+		else {
+			return "";
+		}
+	}
 }
