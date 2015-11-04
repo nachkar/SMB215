@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ProductsEditDlg" widgetVar="ProductsEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditProductsTitle}">
+            <h:form id="ProductsEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{productsController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditProductsLabel_productId}" for="productId" />
+                        <p:inputText id="productId" value="#{productsController.selected.productId}" title="#{bundle.EditProductsTitle_productId}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_productId}"/>
+                        <p:outputLabel value="#{bundle.EditProductsLabel_name}" for="name" />
+                        <p:inputText id="name" value="#{productsController.selected.name}" title="#{bundle.EditProductsTitle_name}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_name}"/>
+                        <p:outputLabel value="#{bundle.EditProductsLabel_quantity}" for="quantity" />
+                        <p:inputText id="quantity" value="#{productsController.selected.quantity}" title="#{bundle.EditProductsTitle_quantity}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_quantity}"/>
+                        <p:outputLabel value="#{bundle.EditProductsLabel_image}" for="image" />
+                        <p:inputTextarea rows="4" cols="30" id="image" value="#{productsController.selected.image}" title="#{bundle.EditProductsTitle_image}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_image}"/>
+                        <p:outputLabel value="#{bundle.EditProductsLabel_statusId}" for="statusId" />
+                        <p:selectOneMenu id="statusId" value="#{productsController.selected.statusId}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_statusId}">
+                            <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{productStatusController.itemsAvailableSelectOne}"
+                                           var="statusIdItem"
+                                           itemValue="#{statusIdItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{productsController.update}" value="#{bundle.Save}" update="display,:ProductsListForm:datalist,:growl" oncomplete="handleSubmit(args, 'ProductsEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ProductsEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

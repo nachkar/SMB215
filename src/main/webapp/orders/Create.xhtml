@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="OrdersCreateDlg" widgetVar="OrdersCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateOrdersTitle}">
+            <h:form id="OrdersCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{ordersController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateOrdersLabel_orderId}" for="orderId" />
+                        <p:inputText id="orderId" value="#{ordersController.selected.orderId}" title="#{bundle.CreateOrdersTitle_orderId}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_orderId}"/>
+                        <p:outputLabel value="#{bundle.CreateOrdersLabel_orderDate}" for="orderDate" />
+                        <p:calendar id="orderDate" pattern="MM/dd/yyyy" value="#{ordersController.selected.orderDate}" title="#{bundle.EditOrdersTitle_orderDate}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_orderDate}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateOrdersLabel_qtt}" for="qtt" />
+                        <p:inputText id="qtt" value="#{ordersController.selected.qtt}" title="#{bundle.CreateOrdersTitle_qtt}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_qtt}"/>
+                        <p:outputLabel value="#{bundle.CreateOrdersLabel_EId}" for="EId" />
+                        <p:selectOneMenu id="EId" value="#{ordersController.selected.EId}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_EId}">
+                            <f:selectItems value="#{staffController.itemsAvailableSelectOne}"
+                                           var="EIdItem"
+                                           itemValue="#{EIdItem}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.CreateOrdersLabel_statusCode}" for="statusCode" />
+                        <p:selectOneMenu id="statusCode" value="#{ordersController.selected.statusCode}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_statusCode}">
+                            <f:selectItems value="#{statusController.itemsAvailableSelectOne}"
+                                           var="statusCodeItem"
+                                           itemValue="#{statusCodeItem}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.CreateOrdersLabel_productId}" for="productId" />
+                        <p:selectOneMenu id="productId" value="#{ordersController.selected.productId}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_productId}">
+                            <f:selectItems value="#{productsController.itemsAvailableSelectOne}"
+                                           var="productIdItem"
+                                           itemValue="#{productIdItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{ordersController.create}" value="#{bundle.Save}" update="display,:OrdersListForm:datalist,:growl" oncomplete="handleSubmit(args,'OrdersCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="OrdersCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
