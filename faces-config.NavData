@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="products/Detail.jsp" x="650" y="600" zoom="true"/>
+        <Node id="status/New.jsp" x="900" y="300" zoom="true"/>
+        <Node id="orders/Detail.jsp" x="650" y="450" zoom="true"/>
+        <Node id="welcomeJSF.jsp" x="400" y="450" zoom="true"/>
+        <Node id="productStatus/List.jsp" x="650" y="300" zoom="true"/>
+        <Node id="orders/List.jsp" x="150" y="300" zoom="true"/>
+        <Node id="status/Edit.jsp" x="150" y="450" zoom="true"/>
+        <Node id="status/List.jsp" x="1400" y="300" zoom="true"/>
+        <Node id="products/Edit.jsp" x="400" y="300" zoom="true"/>
+        <Node id="productStatus/New.jsp" x="900" y="450" zoom="true"/>
+        <Node id="staff/Edit.jsp" x="1150" y="450" zoom="true"/>
+        <Node id="facebookError.html" x="400" y="750" zoom="true"/>
+        <Node id="productStatus/Edit.jsp" x="150" y="150" zoom="true"/>
+        <Node id="orders/New.jsp" x="400" y="600" zoom="true"/>
+        <Node id="staff/List.jsp" x="1650" y="150" zoom="true"/>
+        <Node id="staff/Detail.jsp" x="900" y="150" zoom="true"/>
+        <Node id="*" x="400" y="150" zoom="true"/>
+        <Node id="staff/New.jsp" x="1150" y="150" zoom="true"/>
+        <Node id="products/New.jsp" x="150" y="900" zoom="true"/>
+        <Node id="products/List.jsp" x="150" y="600" zoom="true"/>
+        <Node id="login.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="productStatus/Detail.jsp" x="650" y="150" zoom="true"/>
+        <Node id="status/Detail.jsp" x="150" y="750" zoom="true"/>
+        <Node id="orders/Edit.jsp" x="1150" y="300" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
