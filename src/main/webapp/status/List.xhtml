@@ -19,7 +19,7 @@
                     <p:dataTable id="datalist" value="#{statusController.items}" var="item"
                                  selectionMode="single" selection="#{statusController.selected}"
                                  paginator="true"
-                                 rowKey="#{item.statusCode}"
+                                 rowKey="#{item.statusId}"
                                  rows="10"
                                  rowsPerPageTemplate="10,20,30,40,50"
                                  >
@@ -29,9 +29,9 @@
 
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListStatusTitle_statusCode}"/>
+                                <h:outputText value="#{bundle.ListStatusTitle_statusId}"/>
                             </f:facet>
-                            <h:outputText value="#{item.statusCode}"/>
+                            <h:outputText value="#{item.statusId}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">

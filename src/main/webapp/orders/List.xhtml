@@ -43,27 +43,15 @@
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListOrdersTitle_qtt}"/>
+                                <h:outputText value="#{bundle.ListOrdersTitle_orderDetails}"/>
                             </f:facet>
-                            <h:outputText value="#{item.qtt}"/>
+                            <h:outputText value="#{item.orderDetails}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListOrdersTitle_EId}"/>
+                                <h:outputText value="#{bundle.ListOrdersTitle_customerId}"/>
                             </f:facet>
-                            <h:outputText value="#{item.EId}"/>
-                        </p:column>
-                        <p:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{bundle.ListOrdersTitle_statusCode}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.statusCode}"/>
-                        </p:column>
-                        <p:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{bundle.ListOrdersTitle_productId}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.productId}"/>
+                            <h:outputText value="#{item.customerId}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{ordersController.prepareCreate}" update=":OrdersCreateForm" oncomplete="PF('OrdersCreateDialog').show()"/>

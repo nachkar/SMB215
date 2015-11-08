@@ -12,8 +12,8 @@
             <h:form id="ProductStatusEditForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{productStatusController.selected != null}">
-                        <p:outputLabel value="#{bundle.EditProductStatusLabel_statusId}" for="statusId" />
-                        <p:inputText id="statusId" value="#{productStatusController.selected.statusId}" title="#{bundle.EditProductStatusTitle_statusId}" required="true" requiredMessage="#{bundle.EditProductStatusRequiredMessage_statusId}"/>
+                        <p:outputLabel value="#{bundle.EditProductStatusLabel_PSid}" for="PSid" />
+                        <p:inputText id="PSid" value="#{productStatusController.selected.PSid}" title="#{bundle.EditProductStatusTitle_PSid}" required="true" requiredMessage="#{bundle.EditProductStatusRequiredMessage_PSid}"/>
                         <p:outputLabel value="#{bundle.EditProductStatusLabel_description}" for="description" />
                         <p:inputText id="description" value="#{productStatusController.selected.description}" title="#{bundle.EditProductStatusTitle_description}" required="true" requiredMessage="#{bundle.EditProductStatusRequiredMessage_description}"/>
                     </p:panelGrid>

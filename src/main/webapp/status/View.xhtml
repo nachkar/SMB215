@@ -12,8 +12,8 @@
             <h:form id="StatusViewForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{statusController.selected != null}">
-                        <h:outputText value="#{bundle.ViewStatusLabel_statusCode}"/>
-                        <h:outputText value="#{statusController.selected.statusCode}" title="#{bundle.ViewStatusTitle_statusCode}"/>
+                        <h:outputText value="#{bundle.ViewStatusLabel_statusId}"/>
+                        <h:outputText value="#{statusController.selected.statusId}" title="#{bundle.ViewStatusTitle_statusId}"/>
                         <h:outputText value="#{bundle.ViewStatusLabel_description}"/>
                         <h:outputText value="#{statusController.selected.description}" title="#{bundle.ViewStatusTitle_description}"/>
                     </p:panelGrid>

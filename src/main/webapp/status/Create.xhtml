@@ -12,8 +12,8 @@
             <h:form id="StatusCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{statusController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateStatusLabel_statusCode}" for="statusCode" />
-                        <p:inputText id="statusCode" value="#{statusController.selected.statusCode}" title="#{bundle.CreateStatusTitle_statusCode}" required="true" requiredMessage="#{bundle.CreateStatusRequiredMessage_statusCode}"/>
+                        <p:outputLabel value="#{bundle.CreateStatusLabel_statusId}" for="statusId" />
+                        <p:inputText id="statusId" value="#{statusController.selected.statusId}" title="#{bundle.CreateStatusTitle_statusId}" required="true" requiredMessage="#{bundle.CreateStatusRequiredMessage_statusId}"/>
                         <p:outputLabel value="#{bundle.CreateStatusLabel_description}" for="description" />
                         <p:inputText id="description" value="#{statusController.selected.description}" title="#{bundle.CreateStatusTitle_description}" required="true" requiredMessage="#{bundle.CreateStatusRequiredMessage_description}"/>
                     </p:panelGrid>

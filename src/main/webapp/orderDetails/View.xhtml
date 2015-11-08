@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="OrderDetailsViewDlg" widgetVar="OrderDetailsViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewOrderDetailsTitle}">
+            <h:form id="OrderDetailsViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{orderDetailsController.selected != null}">
+                        <h:outputText value="#{bundle.ViewOrderDetailsLabel_orderId}"/>
+                        <h:outputText value="#{orderDetailsController.selected.orderId}" title="#{bundle.ViewOrderDetailsTitle_orderId}"/>
+                        <h:outputText value="#{bundle.ViewOrderDetailsLabel_qtt}"/>
+                        <h:outputText value="#{orderDetailsController.selected.qtt}" title="#{bundle.ViewOrderDetailsTitle_qtt}"/>
+                        <h:outputText value="#{bundle.ViewOrderDetailsLabel_orders}"/>
+                        <h:outputText value="#{orderDetailsController.selected.orders}" title="#{bundle.ViewOrderDetailsTitle_orders}"/>
+                        <h:outputText value="#{bundle.ViewOrderDetailsLabel_statusId}"/>
+                        <h:outputText value="#{orderDetailsController.selected.statusId}" title="#{bundle.ViewOrderDetailsTitle_statusId}"/>
+                        <h:outputText value="#{bundle.ViewOrderDetailsLabel_productId}"/>
+                        <h:outputText value="#{orderDetailsController.selected.productId}" title="#{bundle.ViewOrderDetailsTitle_productId}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="OrderDetailsViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

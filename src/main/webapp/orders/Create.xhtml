@@ -16,25 +16,17 @@
                         <p:inputText id="orderId" value="#{ordersController.selected.orderId}" title="#{bundle.CreateOrdersTitle_orderId}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_orderId}"/>
                         <p:outputLabel value="#{bundle.CreateOrdersLabel_orderDate}" for="orderDate" />
                         <p:calendar id="orderDate" pattern="MM/dd/yyyy" value="#{ordersController.selected.orderDate}" title="#{bundle.EditOrdersTitle_orderDate}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_orderDate}" showOn="button"/>
-                        <p:outputLabel value="#{bundle.CreateOrdersLabel_qtt}" for="qtt" />
-                        <p:inputText id="qtt" value="#{ordersController.selected.qtt}" title="#{bundle.CreateOrdersTitle_qtt}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_qtt}"/>
-                        <p:outputLabel value="#{bundle.CreateOrdersLabel_EId}" for="EId" />
-                        <p:selectOneMenu id="EId" value="#{ordersController.selected.EId}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_EId}">
-                            <f:selectItems value="#{staffController.itemsAvailableSelectOne}"
-                                           var="EIdItem"
-                                           itemValue="#{EIdItem}"/>
+                        <p:outputLabel value="#{bundle.CreateOrdersLabel_orderDetails}" for="orderDetails" />
+                        <p:selectOneMenu id="orderDetails" value="#{ordersController.selected.orderDetails}" >
+                            <f:selectItems value="#{orderDetailsController.itemsAvailableSelectOne}"
+                                           var="orderDetailsItem"
+                                           itemValue="#{orderDetailsItem}"/>
                         </p:selectOneMenu>
-                        <p:outputLabel value="#{bundle.CreateOrdersLabel_statusCode}" for="statusCode" />
-                        <p:selectOneMenu id="statusCode" value="#{ordersController.selected.statusCode}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_statusCode}">
-                            <f:selectItems value="#{statusController.itemsAvailableSelectOne}"
-                                           var="statusCodeItem"
-                                           itemValue="#{statusCodeItem}"/>
-                        </p:selectOneMenu>
-                        <p:outputLabel value="#{bundle.CreateOrdersLabel_productId}" for="productId" />
-                        <p:selectOneMenu id="productId" value="#{ordersController.selected.productId}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_productId}">
-                            <f:selectItems value="#{productsController.itemsAvailableSelectOne}"
-                                           var="productIdItem"
-                                           itemValue="#{productIdItem}"/>
+                        <p:outputLabel value="#{bundle.CreateOrdersLabel_customerId}" for="customerId" />
+                        <p:selectOneMenu id="customerId" value="#{ordersController.selected.customerId}" required="true" requiredMessage="#{bundle.EditOrdersRequiredMessage_customerId}">
+                            <f:selectItems value="#{customersController.itemsAvailableSelectOne}"
+                                           var="customerIdItem"
+                                           itemValue="#{customerIdItem}"/>
                         </p:selectOneMenu>
                     </p:panelGrid>
                     <p:commandButton actionListener="#{ordersController.create}" value="#{bundle.Save}" update="display,:OrdersListForm:datalist,:growl" oncomplete="handleSubmit(args,'OrdersCreateDialog');"/>

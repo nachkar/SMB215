@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="CustomersCreateDlg" widgetVar="CustomersCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateCustomersTitle}">
+            <h:form id="CustomersCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{customersController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateCustomersLabel_customerId}" for="customerId" />
+                        <p:inputText id="customerId" value="#{customersController.selected.customerId}" title="#{bundle.CreateCustomersTitle_customerId}" required="true" requiredMessage="#{bundle.CreateCustomersRequiredMessage_customerId}"/>
+                        <p:outputLabel value="#{bundle.CreateCustomersLabel_fullName}" for="fullName" />
+                        <p:inputText id="fullName" value="#{customersController.selected.fullName}" title="#{bundle.CreateCustomersTitle_fullName}" required="true" requiredMessage="#{bundle.CreateCustomersRequiredMessage_fullName}"/>
+                        <p:outputLabel value="#{bundle.CreateCustomersLabel_email}" for="email" />
+                        <p:inputText id="email" value="#{customersController.selected.email}" title="#{bundle.CreateCustomersTitle_email}" required="true" requiredMessage="#{bundle.CreateCustomersRequiredMessage_email}"/>
+                        <p:outputLabel value="#{bundle.CreateCustomersLabel_phoneNumber}" for="phoneNumber" />
+                        <p:inputText id="phoneNumber" value="#{customersController.selected.phoneNumber}" title="#{bundle.CreateCustomersTitle_phoneNumber}" required="true" requiredMessage="#{bundle.CreateCustomersRequiredMessage_phoneNumber}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{customersController.create}" value="#{bundle.Save}" update="display,:CustomersListForm:datalist,:growl" oncomplete="handleSubmit(args,'CustomersCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="CustomersCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
