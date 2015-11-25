@@ -23,7 +23,7 @@ body{ background:url(../images/main-bg.jpg) repeat; font-family:"Arial"}
 .login form fieldset label{ font-size:1.2em; padding:0 30px 0 0; color:#5a5a5c}
 .login form fieldset { border:none; line-height:35px; text-align:right}
 .login form{ -webkit-appearance: caret;-moz-appearance: caret;padding:190px 0 0 0; clear:both; width:500px; margin:0 auto; float:left; position:relative; left:-50px}
-.login-btn { background:url(../images/login-btn.png) no-repeat; width:61px; height:24px;border:0;-webkit-appearance: caret;-moz-appearance: caret; cursor:pointer;  position:relative; top:5px\0/!important; /* IE 8 */}
+.login-btn { background:url(../images/login-btn.png) no-repeat; width:61px; height:24px;border:0;-webkit-appearance: caret;-moz-appearance: caret; cursor:pointer;  position:relative; top:5px\0!important; /* IE 8 */}
 .facebook-btn { background:url(../images/facebookConnectButton1.png) no-repeat; width:150px; height:32px;border:0;-webkit-appearance: caret;-moz-appearance: caret; cursor:pointer;}
 
 .login form .error-login input{clear:both; padding:0; color:#F00; background:none; border:none; width:400px; margin:0 0 0 20px}
