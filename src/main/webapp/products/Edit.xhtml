@@ -14,18 +14,18 @@
                     <p:panelGrid columns="2" rendered="#{productsController.selected != null}">
                         <p:outputLabel value="#{bundle.EditProductsLabel_productId}" for="productId" />
                         <p:inputText id="productId" value="#{productsController.selected.productId}" title="#{bundle.EditProductsTitle_productId}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_productId}"/>
-                        <p:outputLabel value="#{bundle.EditProductsLabel_name}" for="name" />
-                        <p:inputText id="name" value="#{productsController.selected.name}" title="#{bundle.EditProductsTitle_name}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_name}"/>
-                        <p:outputLabel value="#{bundle.EditProductsLabel_quantity}" for="quantity" />
-                        <p:inputText id="quantity" value="#{productsController.selected.quantity}" title="#{bundle.EditProductsTitle_quantity}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_quantity}"/>
-                        <p:outputLabel value="#{bundle.EditProductsLabel_image}" for="image" />
-                        <p:inputTextarea rows="4" cols="30" id="image" value="#{productsController.selected.image}" title="#{bundle.EditProductsTitle_image}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_image}"/>
-                        <p:outputLabel value="#{bundle.EditProductsLabel_statusId}" for="statusId" />
-                        <p:selectOneMenu id="statusId" value="#{productsController.selected.statusId}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_statusId}">
+                        <p:outputLabel value="#{bundle.EditProductsLabel_productName}" for="productName" />
+                        <p:inputText id="productName" value="#{productsController.selected.productName}" title="#{bundle.EditProductsTitle_productName}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_productName}"/>
+                        <p:outputLabel value="#{bundle.EditProductsLabel_productQtt}" for="productQtt" />
+                        <p:inputText id="productQtt" value="#{productsController.selected.productQtt}" title="#{bundle.EditProductsTitle_productQtt}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_productQtt}"/>
+                        <p:outputLabel value="#{bundle.EditProductsLabel_productImage}" for="productImage" />
+                        <p:inputTextarea rows="4" cols="30" id="productImage" value="#{productsController.selected.productImage}" title="#{bundle.EditProductsTitle_productImage}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_productImage}"/>
+                        <p:outputLabel value="#{bundle.EditProductsLabel_productStatus}" for="productStatus" />
+                        <p:selectOneMenu id="productStatus" value="#{productsController.selected.productStatus}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_productStatus}">
                             <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
                             <f:selectItems value="#{productStatusController.itemsAvailableSelectOne}"
-                                           var="statusIdItem"
-                                           itemValue="#{statusIdItem}"/>
+                                           var="productStatusItem"
+                                           itemValue="#{productStatusItem}"/>
                         </p:selectOneMenu>
                     </p:panelGrid>
                     <p:commandButton actionListener="#{productsController.update}" value="#{bundle.Save}" update="display,:ProductsListForm:datalist,:growl" oncomplete="handleSubmit(args, 'ProductsEditDialog');"/>

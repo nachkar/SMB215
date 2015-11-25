@@ -18,14 +18,10 @@
                         <h:outputText value="#{ordersController.selected.orderDate}" title="#{bundle.ViewOrdersTitle_orderDate}">
                             <f:convertDateTime pattern="MM/dd/yyyy" />
                         </h:outputText>
-                        <h:outputText value="#{bundle.ViewOrdersLabel_qtt}"/>
-                        <h:outputText value="#{ordersController.selected.qtt}" title="#{bundle.ViewOrdersTitle_qtt}"/>
-                        <h:outputText value="#{bundle.ViewOrdersLabel_EId}"/>
-                        <h:outputText value="#{ordersController.selected.EId}" title="#{bundle.ViewOrdersTitle_EId}"/>
-                        <h:outputText value="#{bundle.ViewOrdersLabel_statusCode}"/>
-                        <h:outputText value="#{ordersController.selected.statusCode}" title="#{bundle.ViewOrdersTitle_statusCode}"/>
-                        <h:outputText value="#{bundle.ViewOrdersLabel_productId}"/>
-                        <h:outputText value="#{ordersController.selected.productId}" title="#{bundle.ViewOrdersTitle_productId}"/>
+                        <h:outputText value="#{bundle.ViewOrdersLabel_orderDetails}"/>
+                        <h:outputText value="#{ordersController.selected.orderDetails}" title="#{bundle.ViewOrdersTitle_orderDetails}"/>
+                        <h:outputText value="#{bundle.ViewOrdersLabel_customerId}"/>
+                        <h:outputText value="#{ordersController.selected.customerId}" title="#{bundle.ViewOrdersTitle_customerId}"/>
                     </p:panelGrid>
                     <p:commandButton value="#{bundle.Close}" onclick="OrdersViewDialog.hide()"/>
                 </h:panelGroup>

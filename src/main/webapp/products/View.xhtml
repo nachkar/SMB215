@@ -14,14 +14,14 @@
                     <p:panelGrid columns="2" rendered="#{productsController.selected != null}">
                         <h:outputText value="#{bundle.ViewProductsLabel_productId}"/>
                         <h:outputText value="#{productsController.selected.productId}" title="#{bundle.ViewProductsTitle_productId}"/>
-                        <h:outputText value="#{bundle.ViewProductsLabel_name}"/>
-                        <h:outputText value="#{productsController.selected.name}" title="#{bundle.ViewProductsTitle_name}"/>
-                        <h:outputText value="#{bundle.ViewProductsLabel_quantity}"/>
-                        <h:outputText value="#{productsController.selected.quantity}" title="#{bundle.ViewProductsTitle_quantity}"/>
-                        <h:outputText value="#{bundle.ViewProductsLabel_image}"/>
-                        <h:outputText value="#{productsController.selected.image}" title="#{bundle.ViewProductsTitle_image}"/>
-                        <h:outputText value="#{bundle.ViewProductsLabel_statusId}"/>
-                        <h:outputText value="#{productsController.selected.statusId}" title="#{bundle.ViewProductsTitle_statusId}"/>
+                        <h:outputText value="#{bundle.ViewProductsLabel_productName}"/>
+                        <h:outputText value="#{productsController.selected.productName}" title="#{bundle.ViewProductsTitle_productName}"/>
+                        <h:outputText value="#{bundle.ViewProductsLabel_productQtt}"/>
+                        <h:outputText value="#{productsController.selected.productQtt}" title="#{bundle.ViewProductsTitle_productQtt}"/>
+                        <h:outputText value="#{bundle.ViewProductsLabel_productImage}"/>
+                        <h:outputText value="#{productsController.selected.productImage}" title="#{bundle.ViewProductsTitle_productImage}"/>
+                        <h:outputText value="#{bundle.ViewProductsLabel_productStatus}"/>
+                        <h:outputText value="#{productsController.selected.productStatus}" title="#{bundle.ViewProductsTitle_productStatus}"/>
                     </p:panelGrid>
                     <p:commandButton value="#{bundle.Close}" onclick="ProductsViewDialog.hide()"/>
                 </h:panelGroup>
