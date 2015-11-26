@@ -1,22 +1,66 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <link href="Styles/styles.css" rel="stylesheet" type="text/css"/>
         <title>Stock</title>
     </head>
     <body>
-        <div class="table-navig">
-            <h:form id="stockform">
-                <p:growl id="msg" showDetail="true" life="3000" />
-                <fieldset>
-                    <label for="welcome"> Welcome Admin</label>
-                    <label for="stock"> Stock </label>
-                    
-                </fieldset>
-                
-            </h:form>
-        </div>
+        <table height="100%" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left">
+                    <h1> <b> Welcome admin </b> </h1>
+                </td>
+                <td>
+                    <h1> <b> Stock </b> </h1>
+                </td>
+                <td>
+                    <img src="barcode.gif" alt="barcode" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="products.gif" alt="products" align="center" />
+                </td>
+                <td>
+                    <img src="customers.gif" alt="customers" align="center" />
+                </td>
+                <td align="top" rowspan="6">
+                    <h2> <b> History </b> </h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <b> Products </b>
+                </td>
+                <td align="center">
+                    <b> Customers </b>
+                </td>
+            </tr>
+            <tr>
+               <td>
+                    <img src="order.gif" alt="order" align="center" />
+                </td>
+                <td>
+                    <img src="more.gif" alt="more" align="center" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <b> Order </b>
+                </td>
+                <td align="center">
+                    <b> More </b>
+                </td> 
+            </tr>
+            <tr height="100px">
+                <td colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a href="aboutUs.xhtml">about us</a>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
