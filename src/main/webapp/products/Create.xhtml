@@ -24,6 +24,7 @@
                         <p:selectOneMenu id="productStatus" value="#{productsController.selected.productStatus}" required="true" requiredMessage="#{bundle.EditProductsRequiredMessage_productStatus}">
                             <f:selectItems value="#{productStatusController.itemsAvailableSelectOne}"
                                            var="productStatusItem"
+                                           itemLabel="#{productStatusItem.description}"
                                            itemValue="#{productStatusItem}"/>
                         </p:selectOneMenu>
                     </p:panelGrid>
